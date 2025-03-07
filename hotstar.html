@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotstar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        scrollbar-width: none;
+    }
+
+
+    .section {
+        width: 100vw;
+        height: 100vh;
+        /* background-color: red; */
+    }
+
+    body {
+        background-color: black;
+    }
+
+    .nav {
+        width: 15vw;
+        height: 100vh;
+      
+         /* background: linear-gradient(to right, #000000, #000000, #000000,#000000,#000000 , #000000, #000000, #000000 ,transparent);  */
+         
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 50;
+        transition: 0.4s all ease;
+    }
+
+    .main {
+        width: 91vw;
+        /* height: 500vh; */
+        /* background-color: gray; */
+        float: right;
+
+    }
+
+    .section-1 {
+        width: 93%;
+        height: 300px;
+        background-color: black;
+        margin: auto;
+        border-radius: 10px;
+        margin-top: 20px;
+        display: flex;
+
+    }
+
+    .img1 {
+        width: 650px;
+        padding: 20px;
+        border-radius: 30px;
+    }
+
+    .jio {
+        width: 40px;
+        height: 40px;
+        border-radius: 5px;
+    }
+
+    .text1 {
+        font-size: 15px;
+        font-weight: 600;
+    }
+
+    .para {
+        font-size: 12px;
+        color: gray;
+        font-weight: 400;
+
+    }
+
+    .head {
+        gap: 10px;
+        padding-top: 40px;
+    }
+
+    .para1 {
+        position: relative;
+        bottom: 35px;
+    }
+
+    .dare {
+        font-size: 15px;
+        margin-top: 10px;
+    }
+
+    .btn {
+        width: 100px;
+        background-color: rgba(128, 128, 128, 0.347);
+        cursor: pointer;
+        outline: none;
+        border: none;
+        font-size: 18px;
+        padding: 10px;
+    }
+
+    .btn:hover {
+        background-color: rgba(128, 128, 128, 0.607);
+        outline: none;
+        border: none;
+    }
+
+    .section-2 {
+
+        width: 93%;
+        background-color: lightblue;
+        margin: 10px auto;
+
+    }
+
+    .bimg {
+
+        width: 100%;
+        position: sticky;
+        top: 0;
+    }
+
+    .section-2-1 {
+        width: 50%;
+        min-height: 300px;
+
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+
+
+    }
+
+    .final {
+        width: 300px;
+    }
+
+    .btn1 {
+        width: 400px;
+        height: auto;
+        font-size: 20px;
+        padding: 5px;
+        background: #009FFF;
+        background: -webkit-linear-gradient(to right, #009FFF, #ec2F4B);
+        background: linear-gradient(to right, #009FFF, #ec2F4B);
+        border: none;
+        outline: none;
+        font-weight: 600;
+        border-radius: 10px;
+    }
+
+    .section-2-2 {
+        position: relative;
+        top: 20px;
+        width: 950px;
+        /* height: 300px; */
+        /* background-color: red;  */
+        height: auto;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        overflow: scroll;
+        padding: 20px;
+
+    }
+
+    .sec-2-main {
+        position: relative;
+        bottom: 250px;
+        background: linear-gradient(to bottom, transparent, #000000, #000000, #000000, #000000, #000000, #000000, #000000);
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+
+    }
+
+    .box {
+        min-width: 200px;
+        transition: 0.4s all ease;
+        cursor: pointer;
+    }
+
+    .box:hover {
+        scale: 1.14;
+    }
+
+    .box img {
+        height: 250px;
+        border-radius: 10px;
+        justify-content: space-evenly;
+    }
+
+    .box1 {
+        min-width: 260px;
+        transition: 0.4s all ease;
+        cursor: pointer;
+    }
+
+    .box1:hover {
+        scale: 1.14;
+    }
+
+    .box1 img {
+        height: 50%;
+        width: 250px;
+        border-radius: 10px;
+        justify-content: space-evenly;
+
+    }
+
+    .sec2 {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .latest {
+        position: relative;
+        top: 30px;
+        left: 25px;
+        font-weight: 700;
+        font-size: 25px;
+    }
+
+    .watch {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .logo {
+        width: 50px;
+        height: 50px;
+        margin-top: 30px;
+        margin-left: 30px;
+       
+    }
+
+    i {
+        color: white;
+    }
+    .emojis{
+         display: flex;
+         flex-direction: column;
+         justify-content: space-evenly;
+         padding: 50px;
+         gap: 20px;
+         transition: 0.4s all ease;
+         
+    }
+    .part{
+        gap: 20px;  
+        transition: 0.4s all ease;
+
+       
+    }
+    .data{
+      position: relative;
+      bottom:5px;
+      opacity: 0;
+      transition: 0.4s all ease;
+
+
+    }
+
+    .nav:hover{
+            z-index: 50;
+            cursor: pointer;
+            background: linear-gradient(to left,transparent, #000000,#000000,#000000, #000000);
+            .data{
+                opacity: 1;
+                color: white;
+            }
+        }
+ 
+   
+</style>
+
+
+<body>
+    <div class="section">
+        <div class="nav">
+            <img src="logo.png" alt="" class="logo">
+
+            <div class="emojis">
+                <div class="d-flex flex-direction part">
+                    <i class="fa-solid fa-house"></i>
+                    <p class="data">Home</p>
+                </div>
+                
+                <div class="d-flex flex-direction part">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <p class="data">Search</p>
+                </div>
+                <div class="d-flex flex-direction part">
+                    <i class="fa-solid fa-tv"></i>
+                    <p class="data">TV</p>
+                </div>
+                <div class="d-flex flex-direction part">
+                    <i class="fa-solid fa-bowl-food"></i>
+                    <p class="data">Movies</p>
+                </div>
+                <div class="d-flex flex-direction part">
+                    <i class="fa-solid fa-person-running"></i>
+                    <p class="data">Sports</p>
+                </div>
+                <div class="d-flex flex-direction part">
+                    <i class="fa-solid fa-video"></i>
+                    <p class="data">Sparks</p>
+                </div>
+                <div class="d-flex flex-direction part">
+                    <i class="fa-solid fa-layer-group"></i>
+                    <p class="data">Categories</p>
+                </div>
+                <div class="d-flex flex-direction part" >
+                    <i class="fa-solid fa-circle-user"></i>
+                    <p class="data">MySpace</p>
+                </div>
+            </div>
+
+
+
+
+        </div>
+        <div class="main">
+            <div class="section-1 ">
+                <div>
+                    <img class="img1" src="dare.png" alt="">
+                </div>
+                <div class="d-flex flex-column gap-2">
+                    <div class="head d-flex">
+                        <img class="jio" src="jio.png" alt="">
+                        <div>
+                            <p class="text1 text-white m-0">Daredevil</p>
+                            <p class="para m-0">Streaming From March 5</p>
+                        </div>
+                    </div>
+                    <p class="dare text-white ">Daredevil's secret life is on the line in this gripping</p>
+                    <p class="para1 text-white dare">superhero drama!</p>
+                    <button class="btn text-white">Trailer</button>
+
+                </div>
+
+
+            </div>
+            <div class="section-2">
+                <img src="background.avif" alt="" class="bimg">
+
+                <!-- <div class="section-2-1 ">  -->
+
+                <div class="sec-2-main">
+                    <div class="watch">
+                        <img src="final.png" alt="" class="final">
+                        <b class="text-white my-3 ">ICC Champions Trophy 2025 . 10m . Cricket</b>
+                        <p class="text-white ">India face New Zealand in the ICC Champions Trophy 2025 final and
+                            here's
+                            what you need to know</p>
+                        <button class="btn1 text-white">Watch Now</button>
+                    </div>
+
+
+                    <div class="sec2">
+                        <h5 class="text-white latest">Latest Releases</h5>
+                        <div class="section-2-2">
+
+                            <div class="box">
+                                <img class="image" src="1.png" alt="">
+                            </div>
+                            <div class="box">
+                                <img class="image" src="2.png" alt="">
+                            </div>
+                            <div class="box">
+                                <img class="image" src="3.png" alt="">
+                            </div>
+                            <div class="box">
+                                <img class="image" src="4.png" alt="">
+                            </div>
+                            <div class="box">
+                                <img class="image" src="5.png" alt="">
+                            </div>
+                            <div class="box">
+                                <img class="image" src="6.png" alt="">
+                            </div>
+                            <div class="box">
+                                <img class="image" src="7.png" alt="">
+                            </div>
+                            <div class="box">
+                                <img class="image" src="8.png" alt="">
+                            </div>
+                            <div class="box ">
+                                <img class="image" src="9.png" alt="">
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <div class="sec2">
+                        <h5 class="text-white latest">Popular Languages</h5>
+                        <div class="section-2-2">
+
+                            <div class="box1">
+                                <img class="image1" src="10.png" alt="">
+                            </div>
+                            <div class="box1">
+                                <img class="image1" src="11.png" alt="">
+                            </div>
+                            <div class="box1">
+                                <img class="image1" src="12.png" alt="">
+                            </div>
+                            <div class="box1">
+                                <img class="image1" src="13.png" alt="">
+                            </div>
+                            <div class="box1">
+                                <img class="image1" src="14.png" alt="">
+                            </div>
+                            <div class="box1">
+                                <img class="image1" src="15.png" alt="">
+                            </div>
+                            <div class="box1">
+                                <img class="image1" src="11.png" alt="">
+                            </div>
+                            <div class="box1">
+                                <img class="image1" src="12.png" alt="">
+                            </div>
+                            <div class="box1">
+                                <img class="image1" src="13.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sec2">
+                        <h5 class="text-white latest">Latest Releases</h5>
+                        <div class="section-2-2">
+
+                            <div class="box">
+                                <img class="image" src="1.png" alt="">
+                            </div>
+                            <div class="box">
+                                <img class="image" src="2.png" alt="">
+                            </div>
+                            <div class="box">
+                                <img class="image" src="3.png" alt="">
+                            </div>
+                            <div class="box">
+                                <img class="image" src="4.png" alt="">
+                            </div>
+                            <div class="box">
+                                <img class="image" src="5.png" alt="">
+                            </div>
+                            <div class="box">
+                                <img class="image" src="6.png" alt="">
+                            </div>
+                            <div class="box">
+                                <img class="image" src="7.png" alt="">
+                            </div>
+                            <div class="box">
+                                <img class="image" src="8.png" alt="">
+                            </div>
+                            <div class="box ">
+                                <img class="image" src="9.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sec2">
+                        <h5 class="text-white latest">Popular Languages</h5>
+                        <div class="section-2-2">
+
+                            <div class="box1">
+                                <img class="image1" src="10.png" alt="">
+                            </div>
+                            <div class="box1">
+                                <img class="image1" src="11.png" alt="">
+                            </div>
+                            <div class="box1">
+                                <img class="image1" src="12.png" alt="">
+                            </div>
+                            <div class="box1">
+                                <img class="image1" src="13.png" alt="">
+                            </div>
+                            <div class="box1">
+                                <img class="image1" src="14.png" alt="">
+                            </div>
+                            <div class="box1">
+                                <img class="image1" src="15.png" alt="">
+                            </div>
+                            <div class="box1">
+                                <img class="image1" src="11.png" alt="">
+                            </div>
+                            <div class="box1">
+                                <img class="image1" src="12.png" alt="">
+                            </div>
+                            <div class="box1">
+                                <img class="image1" src="13.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sec2">
+                        <h5 class="text-white latest">Latest Releases</h5>
+                        <div class="section-2-2">
+
+                            <div class="box">
+                                <img class="image" src="1.png" alt="">
+                            </div>
+                            <div class="box">
+                                <img class="image" src="2.png" alt="">
+                            </div>
+                            <div class="box">
+                                <img class="image" src="3.png" alt="">
+                            </div>
+                            <div class="box">
+                                <img class="image" src="4.png" alt="">
+                            </div>
+                            <div class="box">
+                                <img class="image" src="5.png" alt="">
+                            </div>
+                            <div class="box">
+                                <img class="image" src="6.png" alt="">
+                            </div>
+                            <div class="box">
+                                <img class="image" src="7.png" alt="">
+                            </div>
+                            <div class="box">
+                                <img class="image" src="8.png" alt="">
+                            </div>
+                            <div class="box ">
+                                <img class="image" src="9.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+                <!-- </div>  -->
+
+
+            </div>
+        </div>
+    </div>
+
+
+    </div>
+    </div>
+
+    </div>
+    </div>
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
